@@ -14,7 +14,7 @@ app.get('/', function(req,res){
 	res.send('Hello, I am a chat bot')
 });
 
-app.get('/webhook', function(req,res){
+app.get('/webhook/', function(req,res){
 	if (req.query['hub.verify_token']==='my_name_is_mine'){
 		res.send(req.query['hub.challange'])
 	}
