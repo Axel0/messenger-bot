@@ -1,6 +1,6 @@
 'use strict'
 const express=require('express');
-const bodyParser=require('bodyParser');
+const bodyParser=require('body-parser');
 const request=require('request');
 const app=express();
 
@@ -19,6 +19,6 @@ app.get('/webhook', function(req,res){
 	else res.send('Error, wrong token')
 });
 
-app.liste(app.get('port'),function(){
+app.listen(app.get('port'),function(){
 	console.log('running on port', app.get('port'))
 });
