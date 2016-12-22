@@ -163,7 +163,7 @@ function receivedPostback(event){
   function callSendApi(messageData){
     request({
       uri: 'http://graph.facebook.com/v2.6/me/messages',
-      qs: {access_token: Page_Access_Token},
+      qs: {access_token: process.env.Page_Access_Token},
       method: 'POST',
       json: messageData
     },function(error, response, body){
