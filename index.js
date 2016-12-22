@@ -42,8 +42,8 @@ app.post('/webhook/', function(req,res){
 
           }
           //This part should be handling a postback coming from the structured message defined in sendGenericMessage function //
-          else if (messagingEvent.postback) {
-          receivedPostback(messagingEvent);   
+          else if (event.postback) {
+          receivedPostback(event);   
         }
           else {
             console.log("Webhook received unknown event:", event);
