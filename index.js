@@ -77,12 +77,12 @@ function receivedMessage(event){
       break;
 
      default: 
-     sendTextMesssage(senderID, messageText);
+     sendTextMessage(senderID, messageText);
 
     }
 
   }else if (messageAttachments){
-    sendTextMesssage(senderID, "Message with attachments received");
+    sendTextMessage(senderID, "Message with attachments received");
   }
 }
 
