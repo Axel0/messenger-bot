@@ -38,7 +38,7 @@ app.post('/webhook/', function(req,res){
         entry.messaging.forEach(function(event){
 
           if (event.message){
-            receiveMessage(event);
+            receivedMessage(event);
 
           }
           //This part should be handling a postback coming from the structured message defined in sendGenericMessage function //
