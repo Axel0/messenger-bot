@@ -141,7 +141,7 @@ function receivedPostback(event){
   var timeOfPostback=event.timestamp;
   var payload=event.postback.payload;
 
-  console.log("Received postback for user %d and page %d with payload '%s' + at %d", senderID, recipientID, timeOfPostback, timeOfPostback);
+  console.log("Received postback for user %d and page %d with payload '%s' + at %d", senderID, recipientID, payload, timeOfPostback);
   sendTextMessage(senderID, "Postback Called");
 }
 
@@ -162,7 +162,7 @@ function receivedPostback(event){
 
   function callSendApi(messageData){
     request({
-      uri: 'http://graph.facebook.com/v2.6/me/messages',
+      uri: 'https://graph.facebook.com/v2.6/me/messages',
       qs: {access_token: process.env.Page_Access_Token},
       method: 'POST',
       json: messageData
